@@ -7,19 +7,19 @@
 * sounddevice Versiyon 0.4.4
 
 
-## Dependencies
-# realTimeNoteDedect
+# Dependencies
+## realTimeNoteDedect
 * pip install numpy
 * pip install scipy
 * pip install sounddevice 
 * sudo apt-get install libportaudio2
 
-# voiceRecorder
+## voiceRecorder
 * pip3 install sounddevice
 * pip3 install wavio
 * pip3 install scipy
 * 
-# wavToText
+## wavToText
 * pip install numpy
 * pip install scipy
 * pip install matplotlib
