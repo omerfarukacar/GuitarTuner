@@ -1,6 +1,6 @@
 # GuitarTuner
 
-# Gereklilikler
+# Versions
 * Python Versiyon 2.7.16
 * numpy Versiyon 1.21.2
 * scipy Versiyon 1.1.0
