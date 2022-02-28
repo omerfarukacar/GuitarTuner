@@ -1,10 +1,10 @@
 # GuitarTuner
 
 # Versions
-* Python Versiyon 2.7.16
-* numpy Versiyon 1.21.2
-* scipy Versiyon 1.1.0
-* sounddevice Versiyon 0.4.4
+* Python  2.7.16
+* numpy  1.21.2
+* scipy  1.1.0
+* sounddevice  0.4.4
 
 
 # Dependencies
