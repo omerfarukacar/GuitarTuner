@@ -18,12 +18,12 @@
 * pip3 install sounddevice
 * pip3 install wavio
 * pip3 install scipy
-* 
+ 
 ## wavToText
 * pip install numpy
 * pip install scipy
 * pip install matplotlib
-* 
+
 # Referanslar
 * Referans 1: https://github.com/not-chciken/guitar_tuner
 * Referans 2: https://www.geeksforgeeks.org/create-a-voice-recorder-using-python/
