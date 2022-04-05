@@ -2,16 +2,22 @@
 
 # Versions
 * Python  2.7.16
-* numpy  1.21.2
-* scipy  1.1.0
-* sounddevice  0.4.4
+* matplotlib         3.5.1
+* numpy              1.22.3
+* pydub              0.25.1
+* python-Levenshtein 0.12.0
+* sounddevice        0.4.4
+* scipy              1.8.0
+
 
 
 # Dependencies
 ## realTimeNoteDedect
 * pip install numpy
 * pip install scipy
-* pip install sounddevice 
+* pip install --upgrade numpy 
+* pip install sounddevice
+* sudo apt-get install python-dev libatlas-base-dev
 * sudo apt-get install libportaudio2
 
 ## voiceRecorder
@@ -22,7 +28,9 @@
 ## wavToText
 * pip install numpy
 * pip install scipy
+* sudo apt-get install python3-scipy
 * pip install matplotlib
+* pip install python-Levenshtein==0.12.0
 
 # Reference
 * Reference 1: https://github.com/not-chciken/guitar_tuner
