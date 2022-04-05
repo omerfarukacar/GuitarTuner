@@ -51,7 +51,7 @@ def frequency_spectrum(sample, max_frequency=440):
     freq_array = freq_array[: (n // 2)]  # one side frequency range
 
     raw_audio_data = raw_audio_data - np.average(raw_audio_data)  # zero-centering
-    freq_magnitude = scipy.fft(raw_audio_data)  # fft computing and normalization
+    freq_magnitude = scipy.fft.fft(raw_audio_data)  # fft computing and normalization
     freq_magnitude = freq_magnitude[: (n // 2)]  # one side
 
     if max_frequency:
