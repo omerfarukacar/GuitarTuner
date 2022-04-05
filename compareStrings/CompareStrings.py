@@ -1,11 +1,10 @@
-import numpy as np
 import csv
 
 def percentage(part,whole):
     return 100 * float(part) / float(whole)
 
-wav_csv = open("/home/pi/Desktop/Makale/wavToText/wav_out_clear.csv")
-dedect_csv = open("/home/pi/Desktop/Makale/NoteDedect12String/dedect_out.csv")
+wav_csv = open("wav_out_clear.csv")
+dedect_csv = open("wav_out_noisy.csv")
 
 wav_reader = csv.reader(wav_csv)
 dedect_reader = csv.reader(dedect_csv)
