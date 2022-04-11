@@ -7,14 +7,14 @@ import scipy
 import matplotlib.pyplot as plt
 import csv
 
-
+#omer start
 arr = ""
 def log(str):
     f = open("wav_out.csv", "a+")
     f.write(str)
     f.write(',')
     f.close()
-
+#omer stop
 from utils import (
     frequency_spectrum,
     calculate_distance,
@@ -132,10 +132,10 @@ def predict_notes(song, starts, actual_notes, plot_fft_indices):
             print("Predicted: {} Actual: {}".format(predicted, actual_notes[i]))
         else:
             print("Predicted: {}".format(predicted))
-            
+        #omer start    
         arr = format(predicted)
         log(arr)
-            
+        #omer stop    
         print("Predicted start: {}".format(start))
         length = sample_to - sample_from
         print("Sampled from {} to {} ({} ms)".format(sample_from, sample_to, length))

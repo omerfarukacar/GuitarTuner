@@ -11,16 +11,16 @@ import numpy as np
 import scipy.fftpack
 import sounddevice as sd
 import time
-
-f = open('dedect_out.csv', 'r+')
-f.truncate(0)
-f.close()
-
+#omer start
+f = open('dedect_out.csv', 'r+') #open dedect_out.csv folder
+f.truncate(0) #delete inside
+f.close() #close dedect_out.csv folder
+#omer end
 # General settings that can be changed by the user
 SAMPLE_FREQ = 48000 # sample frequency in Hz
 WINDOW_SIZE = 48000 # window size of the DFT in samples
 # With 12000 samples every 0.25s a new tuning process is executed.
-WINDOW_STEP = 24000 # step size of window
+WINDOW_STEP = 12000 # step size of window
 NUM_HPS = 5 # max number of harmonic product spectrums
 POWER_THRESH = 1e-6 # tuning is activated if the signal power exceeds this threshold
 CONCERT_PITCH = 440 # defining a1
@@ -32,13 +32,14 @@ DELTA_FREQ = SAMPLE_FREQ / WINDOW_SIZE # frequency step width of the interpolate
 OCTAVE_BANDS = [50, 100, 200, 400, 800, 1600, 3200, 6400, 12800, 25600]
 
 ALL_NOTES = ["A","A#","B","C","C#","D","D#","E","F","F#","G","G#"]
+#omer start
 arr = ""
 def log(str):
-    f = open("dedect_out.csv", "a+")
-    f.write(str)
-    f.write(',')
-    f.close()
-
+    f = open("dedect_out.csv", "a+") #open dedect_out.csv folder
+    f.write(str) #write notes as str
+    f.write(',') #write ',' for seperate
+    f.close() #close dedect_out.csv folder
+#omer end
 def find_closest_note(pitch):
   """
   This function finds the closest note for a given pitch
@@ -125,8 +126,7 @@ def callback(indata, frames, time, status):
     os.system('cls' if os.name=='nt' else '\n')
     
     if callback.noteBuffer.count(callback.noteBuffer[0]) == len(callback.noteBuffer):
-      #omer print(f"Closest note: {closest_note} {max_freq}/{closest_pitch}")
-        
+    #omer start    
         if(closest_note == "D3"):
             return
         else:
@@ -136,7 +136,7 @@ def callback(indata, frames, time, status):
     else:
       #print(f"Closest note: ...")
       return
-        
+    #omer stop     
   else:    
     print('no input')
 try:

@@ -5,21 +5,7 @@ import numpy as np
 import scipy
 from pydub.utils import get_array_type
 from Levenshtein import distance
-
-'''NOTES = {
-    "A": 440,
-    "A#": 466.1637615180899,
-    "B": 493.8833012561241,
-    "C": 523.2511306011972,
-    "C#": 554.3652619537442,
-    "D": 587.3295358348151,
-    "D#": 622.2539674441618,
-    "E": 659.2551138257398,
-    "F": 698.4564628660078,
-    "F#": 739.9888454232688,
-    "G": 783.9908719634985,
-    "G#": 830.6093951598903,
-}'''
+#omer start
 NOTES = {    
     "E2": 82.41,
     "A2": 110,
@@ -32,7 +18,7 @@ NOTES = {
     "E4": 329.6,
     "G4": 392, 
 }
-
+#omer stop
 def frequency_spectrum(sample, max_frequency=440):
     """
     Derive frequency spectrum of a signal pydub.AudioSample
@@ -118,10 +104,10 @@ def get_note_for_freq(f, tolerance=33):
     }
 
     # Get the frequence into the 440 octave
-    '''range_min = note_ranges["A"][0]
-    range_max = note_ranges["G#"][1]'''
+    #omer start
     range_min = note_ranges["E2"][0]
     range_max = note_ranges["G4"][1]
+    #omer stop
     if f < range_min:
         while f < range_min:
             f *= 2
