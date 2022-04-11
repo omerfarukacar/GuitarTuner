@@ -12,7 +12,7 @@
 
 
 # Dependencies
-## realTimeNoteDedect
+## NoteDedect
 * pip install numpy
 * pip install scipy
 * pip install --upgrade numpy 
