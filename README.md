@@ -14,7 +14,7 @@
 # Dependencies
 ## NoteDedect
 
-* Usb sound card need alsa configrutaion.
+* Usb sound card need alsa configuration.
 ```
 sudo nano /etc/asound.conf
 
