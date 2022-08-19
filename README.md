@@ -15,7 +15,7 @@
 ## NoteDedect
 
 * Usb sound card need alsa configrutaion.
-sudo nano /etc/asound.conf
+* sudo nano /etc/asound.conf
 
 pcm.!default  {
  type hw card 1
