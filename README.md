@@ -13,6 +13,17 @@
 
 # Dependencies
 ## NoteDedect
+
+* Usb sound card need alsa configrutaion.
+sudo nano /etc/asound.conf
+
+pcm.!default  {
+ type hw card 1
+}
+ctl.!default {
+ type hw card 1
+}
+
 * pip install numpy
 * pip install scipy
 * pip install --upgrade numpy 
