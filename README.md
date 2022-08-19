@@ -32,6 +32,11 @@ ctl.!default {
 * sudo apt-get install python-dev libatlas-base-dev
 * sudo apt-get install libportaudio2
 
+Run command
+```
+python3 noteDedect_12String.py
+```
+
 ## voiceRecorder
 * pip3 install sounddevice
 * pip3 install wavio
