@@ -49,3 +49,4 @@ ctl.!default {
 * Reference 2: https://www.geeksforgeeks.org/create-a-voice-recorder-using-python/
 * Reference 3: https://guitargearfinder.com/guides/how-to-tune-a-12-string-guitar/
 * Reference 4: https://github.com/ianvonseggern1/note-prediction
+* Reference 5: https://learn.adafruit.com/usb-audio-cards-with-a-raspberry-pi/updating-alsa-config
