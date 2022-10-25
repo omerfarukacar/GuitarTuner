@@ -55,3 +55,4 @@ python3 noteDedect_12String.py
 * Reference 3: https://guitargearfinder.com/guides/how-to-tune-a-12-string-guitar/
 * Reference 4: https://github.com/ianvonseggern1/note-prediction
 * Reference 5: https://learn.adafruit.com/usb-audio-cards-with-a-raspberry-pi/updating-alsa-config
+* Reference 6: https://pypi.org/project/noisereduce/
