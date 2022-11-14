@@ -20,7 +20,7 @@ f.close() #close dedect_out.csv folder
 SAMPLE_FREQ = 48000 # sample frequency in Hz
 WINDOW_SIZE = 48000 # window size of the DFT in samples
 # With 12000 samples every 0.25s a new tuning process is executed.
-WINDOW_STEP = 12000 # step size of window
+WINDOW_STEP = 24000 # step size of window
 NUM_HPS = 5 # max number of harmonic product spectrums
 POWER_THRESH = 1e-6 # tuning is activated if the signal power exceeds this threshold
 CONCERT_PITCH = 440 # defining a1
@@ -77,7 +77,6 @@ def callback(indata, frames, time, status):
     signal_power = (np.linalg.norm(callback.window_samples, ord=2)**2) / len(callback.window_samples)
     if signal_power < POWER_THRESH:
       os.system('cls' if os.name=='nt' else 'clear')
-      print("Closest note: ...")
       return
 
     # avoid spectral leakage by multiplying the signal with a hann window
@@ -85,7 +84,7 @@ def callback(indata, frames, time, status):
     magnitude_spec = abs(scipy.fftpack.fft(hann_samples)[:len(hann_samples)//2])
 
     # supress mains hum, set everything below 62Hz to zero
-    for i in range(int(62/DELTA_FREQ)):
+    for i in range(int(120/DELTA_FREQ)):
       magnitude_spec[i] = 0
 
     # calculate average energy per frequency for the octave bands
@@ -127,14 +126,10 @@ def callback(indata, frames, time, status):
     
     if callback.noteBuffer.count(callback.noteBuffer[0]) == len(callback.noteBuffer):
     #omer start    
-        if(closest_note == "D3"):
-            return
-        else:
-          print(f"Note: {closest_note}")          
-          arr=closest_note
-          log(arr)
+        print(f"Note: {closest_note}")          
+        arr=closest_note
+        log(arr)
     else:
-      #print(f"Closest note: ...")
       return
     #omer stop     
   else:    
